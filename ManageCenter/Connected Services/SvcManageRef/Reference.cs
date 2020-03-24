@@ -26,10 +26,16 @@ namespace ManageCenter.SvcManageRef {
         private uint ConnIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime ConnectedTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private uint DevIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool IsOnlineField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime LastActiveTimeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ProdNameField;
@@ -58,6 +64,19 @@ namespace ManageCenter.SvcManageRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime ConnectedTime {
+            get {
+                return this.ConnectedTimeField;
+            }
+            set {
+                if ((this.ConnectedTimeField.Equals(value) != true)) {
+                    this.ConnectedTimeField = value;
+                    this.RaisePropertyChanged("ConnectedTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public uint DevId {
             get {
                 return this.DevIdField;
@@ -79,6 +98,19 @@ namespace ManageCenter.SvcManageRef {
                 if ((this.IsOnlineField.Equals(value) != true)) {
                     this.IsOnlineField = value;
                     this.RaisePropertyChanged("IsOnline");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime LastActiveTime {
+            get {
+                return this.LastActiveTimeField;
+            }
+            set {
+                if ((this.LastActiveTimeField.Equals(value) != true)) {
+                    this.LastActiveTimeField = value;
+                    this.RaisePropertyChanged("LastActiveTime");
                 }
             }
         }

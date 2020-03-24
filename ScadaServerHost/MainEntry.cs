@@ -27,6 +27,7 @@ namespace ScadaServerHost
 
         public void Start()
         {
+            MyServer.Start();
             try
             {
                 host.Open();
@@ -36,9 +37,7 @@ namespace ScadaServerHost
                 Console.WriteLine(e);
                 throw;
             }
-            MyServer.Start();
-            DevInfo dev = new DevInfo(0, 2, string.Empty, false);
-            ManageSvc.AddDevice(dev);     //添加一个设备
+
         }
 
         public void Stop()

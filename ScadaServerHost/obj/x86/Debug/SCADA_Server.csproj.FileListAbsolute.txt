@@ -19,6 +19,7 @@ F:\C#工作区\数据采集服务器系统\DataCollectionServer\DataCollectionSe
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Debug\HPSocket.Net.dll
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Debug\ScadaWcfLibrary.dll
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Debug\Topshelf.dll
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Debug\ScadaWcfLibrary.pdb
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Debug\ScadaWcfLibrary.dll.config
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Debug\HPSocket.Net.pdb
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Debug\HPSocket.Net.xml
@@ -28,4 +29,3 @@ F:\C#工作区\数据采集服务器系统\DataCollectionServer\DataCollectionSe
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\DataCollectionServer\obj\x86\Debug\SCADA_Server.csproj.CopyComplete
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\DataCollectionServer\obj\x86\Debug\ScadaServerHost.exe
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\DataCollectionServer\obj\x86\Debug\ScadaServerHost.pdb
-F:\C#工作区\数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Debug\ScadaWcfLibrary.pdb

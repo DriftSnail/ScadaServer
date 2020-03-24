@@ -9,8 +9,10 @@
   <xs:complexType name="DevInfo">
     <xs:sequence>
       <xs:element minOccurs="0" name="ConnId" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="ConnectedTime" type="xs:dateTime" />
       <xs:element minOccurs="0" name="DevId" type="xs:unsignedInt" />
       <xs:element minOccurs="0" name="IsOnline" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastActiveTime" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ProdName" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

@@ -129,9 +129,23 @@ namespace ScadaServerHost
             return HandleResult.Ok;
         }
 
+        /// <summary>
+        /// 服务器接收一个连接时触发
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="connId"></param>
+        /// <param name="client"></param>
+        /// <returns></returns>
         private HandleResult server_OnAccept(IServer sender, IntPtr connId, IntPtr client)
         {
-            Svc.AddDevice(new DevInfo(1,3,"",false));
+            try
+            {
+                Svc.AddDevice(new DevInfo((uint)connId, 0, "Unknown", true, DateTime.Now, DateTime.Now));     //在连接列表添加一个设备
+            }
+            catch
+            {
+
+            }
             return HandleResult.Ok;
         }
 
@@ -145,6 +159,7 @@ namespace ScadaServerHost
             //string recievedStr = Encoding.Default.GetString(data);
             byte[] data;
             server.Fetch(connId, length, out data);
+
 #if DEBUG
             Console.WriteLine(string.Format("收到连接ID：{0} 的信息，长度：{1}，内容：{2}", connId, length, BitConverter.ToString(data)));
 #endif
