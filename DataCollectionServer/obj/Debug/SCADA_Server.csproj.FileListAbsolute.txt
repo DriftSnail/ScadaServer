@@ -1,0 +1,10 @@
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\Debug\DataCollectionServer.exe.config
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\Debug\DataCollectionServer.exe
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\Debug\DataCollectionServer.pdb
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\Debug\Topshelf.dll
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\Debug\Topshelf.xml
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\obj\Debug\SCADA_Server.csprojAssemblyReference.cache
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\obj\Debug\SCADA_Server.csproj.CoreCompileInputs.cache
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\obj\Debug\SCADA_Server.csproj.CopyComplete
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\obj\Debug\DataCollectionServer.exe
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\obj\Debug\DataCollectionServer.pdb

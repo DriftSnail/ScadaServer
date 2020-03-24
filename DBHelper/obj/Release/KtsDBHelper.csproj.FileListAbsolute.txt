@@ -1,0 +1,12 @@
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DBHelper\bin\Release\KtsDBHelper.dll
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DBHelper\bin\Release\KtsDBHelper.pdb
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DBHelper\bin\Release\log4net.dll
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DBHelper\bin\Release\MySql.Data.dll
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DBHelper\bin\Release\System.Data.SQLite.DLL
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DBHelper\obj\Release\KtsDBHelper.Properties.Resources.resources
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DBHelper\obj\Release\KtsDBHelper.csproj.GenerateResource.cache
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DBHelper\obj\Release\KtsDBHelper.csproj.CoreCompileInputs.cache
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DBHelper\obj\Release\KtsDBHelper.csproj.CopyComplete
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DBHelper\obj\Release\KtsDBHelper.dll
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DBHelper\obj\Release\KtsDBHelper.pdb
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DBHelper\obj\Release\KtsDBHelper.csprojAssemblyReference.cache

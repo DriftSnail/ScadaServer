@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+    <Choose>
+    
+        <!-- win x86-->
+        <When Condition="'$(Platform)' == 'x86' And '$(OS)' == 'Windows_NT'">
+            <ItemGroup>
+                <None Include="$(MSBuildThisFileDirectory)\..\runtimes\win-x86\native\*.*">
+                    <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+                    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+                </None>
+            </ItemGroup>
+        </When>
+        
+        <!-- win x64 -->
+        <When Condition="'$(Platform)' == 'x64' And '$(OS)' == 'Windows_NT'">
+            <ItemGroup>
+                <None Include="$(MSBuildThisFileDirectory)\..\runtimes\win-x64\native\*.*">
+                    <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+                    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+                </None>
+            </ItemGroup>
+        </When>
+        
+        <!-- AnyCPU win (Prefer32Bit == null) -->
+        <When Condition="'$(Platform)' == 'AnyCPU' And '$(Prefer32Bit)' == '' And '$(OS)' == 'Windows_NT'">
+            <ItemGroup>
+                <None Include="$(MSBuildThisFileDirectory)\..\content\HPSocket\*.*">
+                    <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+                    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+                </None>
+            </ItemGroup>
+        </When>
+        
+        <!-- AnyCPU win x86 (Prefer32Bit == True) -->
+        <When Condition="'$(Platform)' == 'AnyCPU' And '$(Prefer32Bit)' == 'True' And '$(OS)' == 'Windows_NT'">
+            <ItemGroup>
+                <None Include="$(MSBuildThisFileDirectory)\..\runtimes\win-x86\native\*.*">
+                    <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+                    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+                </None>
+            </ItemGroup>
+        </When>
+        
+        <!-- AnyCPU win x64 (Prefer32Bit == False) -->
+        <When Condition="'$(Platform)' == 'AnyCPU' And '$(Prefer32Bit)' == 'False' And '$(OS)' == 'Windows_NT'">
+            <ItemGroup>
+                <None Include="$(MSBuildThisFileDirectory)\..\runtimes\win-x64\native\*.*">
+                    <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+                    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+                </None>
+            </ItemGroup>
+        </When>
+        
+        <!-- Other -->
+        <Otherwise>
+            <ItemGroup>
+                <None Include="$(MSBuildThisFileDirectory)\..\content\HPSocket\*.*">
+                    <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+                    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+                </None>
+            </ItemGroup>
+        </Otherwise>
+        
+    </Choose>
+</Project>

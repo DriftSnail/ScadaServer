@@ -1,0 +1,10 @@
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\bin\Debug\ManageCenter.exe.config
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\bin\Debug\ManageCenter.exe
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\bin\Debug\ManageCenter.pdb
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\obj\Debug\ManageCenter.MainForm.resources
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\obj\Debug\ManageCenter.Properties.Resources.resources
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\obj\Debug\ManageCenter.csproj.GenerateResource.cache
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\obj\Debug\ManageCenter.csproj.CoreCompileInputs.cache
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\obj\Debug\ManageCenter.exe
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\obj\Debug\ManageCenter.pdb
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\obj\Debug\ManageCenter.csprojAssemblyReference.cache

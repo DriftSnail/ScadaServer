@@ -1,0 +1,12 @@
+F:\C#工作区\数据采集服务器系统\ScadaServiceSolution\ScadaWcfLibrary\bin\x86\Debug\ScadaWcfServiceLibrary.dll.config
+F:\C#工作区\数据采集服务器系统\ScadaServiceSolution\ScadaWcfLibrary\bin\x86\Debug\ScadaWcfServiceLibrary.dll
+F:\C#工作区\数据采集服务器系统\ScadaServiceSolution\ScadaWcfLibrary\bin\x86\Debug\ScadaWcfServiceLibrary.pdb
+F:\C#工作区\数据采集服务器系统\ScadaServiceSolution\ScadaWcfLibrary\obj\x86\Debug\ScadaWcfLibrary.csproj.CoreCompileInputs.cache
+F:\C#工作区\数据采集服务器系统\ScadaServiceSolution\ScadaWcfLibrary\obj\x86\Debug\ScadaWcfServiceLibrary.dll
+F:\C#工作区\数据采集服务器系统\ScadaServiceSolution\ScadaWcfLibrary\obj\x86\Debug\ScadaWcfServiceLibrary.pdb
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaWcfLibrary\obj\x86\Debug\ScadaWcfLibrary.csproj.CoreCompileInputs.cache
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaWcfLibrary\bin\x86\Debug\ScadaWcfLibrary.dll.config
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaWcfLibrary\bin\x86\Debug\ScadaWcfLibrary.dll
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaWcfLibrary\bin\x86\Debug\ScadaWcfLibrary.pdb
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaWcfLibrary\obj\x86\Debug\ScadaWcfLibrary.dll
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaWcfLibrary\obj\x86\Debug\ScadaWcfLibrary.pdb

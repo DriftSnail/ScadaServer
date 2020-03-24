@@ -1,0 +1,13 @@
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Release\HPSocket4C.dll
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Release\DataCollectionServer.exe.config
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Release\DataCollectionServer.exe
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Release\DataCollectionServer.pdb
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Release\HPSocket.Net.dll
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Release\Topshelf.dll
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Release\HPSocket.Net.pdb
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Release\HPSocket.Net.xml
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\bin\x86\Release\Topshelf.xml
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\obj\x86\Release\SCADA_Server.csproj.CoreCompileInputs.cache
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\obj\x86\Release\SCADA_Server.csproj.CopyComplete
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\obj\x86\Release\DataCollectionServer.exe
+F:\C#工作区\SocketToDB数据采集服务器系统\DataCollectionServer\DataCollectionServer\obj\x86\Release\DataCollectionServer.pdb

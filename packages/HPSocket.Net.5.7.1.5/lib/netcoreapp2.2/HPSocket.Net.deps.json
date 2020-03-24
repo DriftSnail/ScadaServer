@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "HPSocket.Net/2.0.0": {
+        "runtime": {
+          "HPSocket.Net.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HPSocket.Net/2.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

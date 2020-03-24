@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCADA_Server", "DataCollectionServer\SCADA_Server.csproj", "{07AD75D4-E096-4B24-9E12-E10CF028299E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KtsDBHelper", "DBHelper\KtsDBHelper.csproj", "{95964C25-BFD6-43B7-807B-C67EB5A4DDB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScadaWcfLibrary", "ScadaWcfLibrary\ScadaWcfLibrary.csproj", "{B0E9C327-6708-47ED-8EE0-FD11B5AC6832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageCenter", "ManageCenter\ManageCenter.csproj", "{E1C54A7F-A13D-434A-9316-155398C5DD2B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0E9C327-6708-47ED-8EE0-FD11B5AC6832} = {B0E9C327-6708-47ED-8EE0-FD11B5AC6832}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07AD75D4-E096-4B24-9E12-E10CF028299E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07AD75D4-E096-4B24-9E12-E10CF028299E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07AD75D4-E096-4B24-9E12-E10CF028299E}.Debug|x86.ActiveCfg = Debug|x86
+		{07AD75D4-E096-4B24-9E12-E10CF028299E}.Debug|x86.Build.0 = Debug|x86
+		{07AD75D4-E096-4B24-9E12-E10CF028299E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07AD75D4-E096-4B24-9E12-E10CF028299E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07AD75D4-E096-4B24-9E12-E10CF028299E}.Release|x86.ActiveCfg = Release|x86
+		{07AD75D4-E096-4B24-9E12-E10CF028299E}.Release|x86.Build.0 = Release|x86
+		{95964C25-BFD6-43B7-807B-C67EB5A4DDB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95964C25-BFD6-43B7-807B-C67EB5A4DDB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95964C25-BFD6-43B7-807B-C67EB5A4DDB9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{95964C25-BFD6-43B7-807B-C67EB5A4DDB9}.Debug|x86.Build.0 = Debug|Any CPU
+		{95964C25-BFD6-43B7-807B-C67EB5A4DDB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95964C25-BFD6-43B7-807B-C67EB5A4DDB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95964C25-BFD6-43B7-807B-C67EB5A4DDB9}.Release|x86.ActiveCfg = Release|Any CPU
+		{95964C25-BFD6-43B7-807B-C67EB5A4DDB9}.Release|x86.Build.0 = Release|Any CPU
+		{B0E9C327-6708-47ED-8EE0-FD11B5AC6832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E9C327-6708-47ED-8EE0-FD11B5AC6832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E9C327-6708-47ED-8EE0-FD11B5AC6832}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B0E9C327-6708-47ED-8EE0-FD11B5AC6832}.Debug|x86.Build.0 = Debug|Any CPU
+		{B0E9C327-6708-47ED-8EE0-FD11B5AC6832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E9C327-6708-47ED-8EE0-FD11B5AC6832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0E9C327-6708-47ED-8EE0-FD11B5AC6832}.Release|x86.ActiveCfg = Release|x86
+		{B0E9C327-6708-47ED-8EE0-FD11B5AC6832}.Release|x86.Build.0 = Release|x86
+		{E1C54A7F-A13D-434A-9316-155398C5DD2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1C54A7F-A13D-434A-9316-155398C5DD2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1C54A7F-A13D-434A-9316-155398C5DD2B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E1C54A7F-A13D-434A-9316-155398C5DD2B}.Debug|x86.Build.0 = Debug|Any CPU
+		{E1C54A7F-A13D-434A-9316-155398C5DD2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1C54A7F-A13D-434A-9316-155398C5DD2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1C54A7F-A13D-434A-9316-155398C5DD2B}.Release|x86.ActiveCfg = Release|Any CPU
+		{E1C54A7F-A13D-434A-9316-155398C5DD2B}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD9FE333-FBCE-43B7-80F4-8ED7282D47AC}
+	EndGlobalSection
+EndGlobal
