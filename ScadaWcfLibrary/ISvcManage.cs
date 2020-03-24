@@ -15,7 +15,8 @@ namespace ScadaWcfLibrary
         List<DevInfo> GetDeviceList();
         [OperationContract]
         uint GetDeviceCount();
-
+        [OperationContract]
+        string PullData();
 
     }
 
@@ -34,19 +35,24 @@ namespace ScadaWcfLibrary
         [DataMember]
         public bool IsOnline { get; set; }
         [DataMember]
-        public DateTime ConnectedTime { get; set; }         //设备接入时间
+        public DateTime ConnTime { get; set; }         //设备接入时间
         [DataMember]
         public DateTime LastActiveTime { get; set; }        //设备上一次活跃时间
 
 
-        public DevInfo(uint _connId, uint _devId,  string _prodName, bool _isOnline, DateTime _connectedTime, DateTime _lastActiveTime)
+        public DevInfo(uint _connId, uint _devId,  string _prodName, bool _isOnline, DateTime _ConnTime, DateTime _lastActiveTime)
         {
             DevId = _devId;
             ConnId = _connId;
             ProdName = _prodName;
             IsOnline = _isOnline;
-            ConnectedTime = _connectedTime;
+            ConnTime = _ConnTime;
             LastActiveTime = _lastActiveTime;
+        }
+
+        public DevInfo()
+        {
+
         }
     }
 

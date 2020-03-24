@@ -38,7 +38,7 @@ namespace ScadaServerHost
         /// </summary>
         public ServerState State
         {
-            get{return state;}
+            get { return state; }
         }
 
         /// <summary>
@@ -69,10 +69,11 @@ namespace ScadaServerHost
         #endregion
 
         public TcpPullServer server = new TcpPullServer();
+        private HPSocket.Thread.ThreadPool receiveThreadPool = new HPSocket.Thread.ThreadPool();
 
         public ScadaServer(string _name, string _ip, ushort _port, SvcManage svc)
         {
-            
+
             state = ServerState.Stoped;
             serverName = _name;
             server.Address = _ip;
@@ -109,15 +110,16 @@ namespace ScadaServerHost
                     state = ServerState.Stoped;
                     throw new Exception(string.Format("服务端启动失败：{0}，{1}", server.ErrorMessage, server.ErrorCode));
                 }
+                receiveThreadPool.Start(5, HPSocket.Thread.RejectedPolicy.WaitFor, 0, 0);
             }
             catch (Exception exc)
             {
                 Console.Write(exc.Message);
             }
-            
+
 
         }
-        public void Stop() {  }
+        public void Stop() { }
 
         #region Server事件处理方法
 
@@ -138,14 +140,8 @@ namespace ScadaServerHost
         /// <returns></returns>
         private HandleResult server_OnAccept(IServer sender, IntPtr connId, IntPtr client)
         {
-            try
-            {
-                Svc.AddDevice(new DevInfo((uint)connId, 0, "Unknown", true, DateTime.Now, DateTime.Now));     //在连接列表添加一个设备
-            }
-            catch
-            {
+            //Svc.AddDevice(new DevInfo((uint)connId, 0, "Unknown", true, DateTime.Now, DateTime.Now));     //在连接列表添加一个设备
 
-            }
             return HandleResult.Ok;
         }
 
@@ -159,6 +155,8 @@ namespace ScadaServerHost
             //string recievedStr = Encoding.Default.GetString(data);
             byte[] data;
             server.Fetch(connId, length, out data);
+            RecvPkg pkg = new RecvPkg((uint)connId, data);
+            receiveThreadPool.Submit(AnalyseReciveData, pkg, -1);
 
 #if DEBUG
             Console.WriteLine(string.Format("收到连接ID：{0} 的信息，长度：{1}，内容：{2}", connId, length, BitConverter.ToString(data)));
@@ -197,7 +195,94 @@ namespace ScadaServerHost
             return HandleResult.Ok;
         }
 
-#endregion Server事件处理方法
+        #endregion Server事件处理方法
+
+
+        #region  数据处理与解析部分
+
+        public class RecvPkg
+        {
+            public uint connId;
+            public byte[] data;
+            
+            public RecvPkg(uint _connId, byte[] _data)
+            {
+                connId = _connId;
+                data = _data;
+            }
+
+        }
+
+
+        /// <summary>
+        /// 用于分析和处理接收的数据
+        /// </summary>
+        /// <param name="obj"></param>
+        private void AnalyseReciveData(object obj)
+        {
+            RecvPkg pkg = (RecvPkg)obj;
+            DevInfo tmp;
+            if( Svc.UpdateActiveTime(pkg.connId) ) //查询到连接，更新活跃时间
+            {
+                
+            }
+            else if( ParseLoginPkg(pkg, out tmp) )//未查询到该连接，但解析登录包正确，则进行登录操作
+            {
+                Svc.Login(tmp);
+            }
+            else //登录不成功，把设备踢下线
+            {
+                server.Disconnect(new IntPtr(pkg.connId), true);
+            }
+
+        }
+
+        /// <summary>
+        /// 解析登录包
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="info"></param>
+        /// <returns>登录是否成功</returns>
+        private bool ParseLoginPkg(RecvPkg pkg, out DevInfo info)
+        {
+            info = new DevInfo();
+            info.ConnId = pkg.connId;
+            info.IsOnline = true;
+            info.ConnTime = DateTime.Now;
+            info.LastActiveTime = DateTime.Now;
+
+            int i;
+            for (i = 0; i < pkg.data.Length; i++)
+            {
+                if (pkg.data[i] == '#')
+                    break;
+            }
+            if (pkg.data.First() == '*' && pkg.data.Last() == '*' && i > 0)
+            {
+                string s = Encoding.Default.GetString(pkg.data);
+                try
+                {
+                    info.ProdName = s.Substring(1, i-1);
+                    info.DevId = Convert.ToUInt32(s.Substring(i + 1, s.Length - i - 2));
+                    return true;
+                }
+                catch(Exception)
+                {
+                    info = null;
+                    return false;
+                }
+
+            }
+            else
+            {
+                info = null;
+                return false;
+            }
+        }
+        
+
+        #endregion
+
 
 
     }

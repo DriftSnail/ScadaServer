@@ -27,6 +27,19 @@ namespace ScadaWcfLibrary
             return (uint)devList.Count();
         }
 
+        string pbuf;
+        public string PullData()
+        {
+            return pbuf;
+        }
+
+        #region 宿主程序使用
+
+        public void PushData(byte[] data)
+        {
+            pbuf = Encoding.Default.GetString(data);
+        }
+
         /// <summary>
         /// 添加一个设备
         /// </summary>
@@ -38,6 +51,75 @@ namespace ScadaWcfLibrary
                 devList.Add(dev);
             }
         }
+
+        /// <summary>
+        /// 根据connId获取设备连接信息
+        /// </summary>
+        /// <param name="_connId"></param>
+        /// <returns></returns>
+        public DevInfo GetDevInfo(uint _connId)
+        {
+            DevInfo ret;
+            try
+            {
+                ret = devList.Where(x => x.ConnId == _connId).First();
+            }
+            catch(Exception)
+            {
+                ret = null;
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// 更新设备的最后活跃时间
+        /// </summary>
+        /// <param name="_connId">连接ID</param>
+        /// <returns>true:成功； false:未查询到该连接</returns>
+        public bool UpdateActiveTime(uint _connId)
+        {
+            for(int i = 0; i < devList.Count; i++)
+            {
+                if( devList[i].ConnId == _connId )
+                {
+                    devList[i].LastActiveTime = DateTime.Now;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// 设备登录
+        /// </summary>
+        /// <param name="_connId">连接ID</param>
+        /// <param name="_prodName">产品名称</param>
+        /// <param name="_devId">设备ID</param>
+        /// <returns>登录是否成功</returns>
+        public bool Login(DevInfo dev)
+        {
+            if(dev != null)
+            {
+                for (int i = 0; i < devList.Count; i++)
+                {
+                    if (devList[i].DevId == dev.DevId)  //设备Id存在，则进行修改
+                    {
+                        devList[i].ConnId = dev.ConnId;
+                        devList[i].IsOnline = true;
+                        devList[i].ProdName = dev.ProdName;
+                        devList[i].ConnTime = dev.ConnTime;
+                        devList[i].LastActiveTime = dev.LastActiveTime;
+                        return true;
+                    }
+                }
+                AddDevice(dev); //设备不存在，则添加一个设备
+            }
+            return false;
+        }
+
+
+
+        #endregion
 
     }
 }

@@ -26,7 +26,7 @@ namespace ManageCenter.SvcManageRef {
         private uint ConnIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime ConnectedTimeField;
+        private System.DateTime ConnTimeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private uint DevIdField;
@@ -64,14 +64,14 @@ namespace ManageCenter.SvcManageRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime ConnectedTime {
+        public System.DateTime ConnTime {
             get {
-                return this.ConnectedTimeField;
+                return this.ConnTimeField;
             }
             set {
-                if ((this.ConnectedTimeField.Equals(value) != true)) {
-                    this.ConnectedTimeField = value;
-                    this.RaisePropertyChanged("ConnectedTime");
+                if ((this.ConnTimeField.Equals(value) != true)) {
+                    this.ConnTimeField = value;
+                    this.RaisePropertyChanged("ConnTime");
                 }
             }
         }
