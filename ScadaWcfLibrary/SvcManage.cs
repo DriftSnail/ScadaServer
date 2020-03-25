@@ -12,6 +12,7 @@ namespace ScadaWcfLibrary
     public class SvcManage : ISvcManage
     {
         private List<DevInfo> devList = new List<DevInfo>();
+        private Queue<string> mylog = new Queue<string>();
 
         /// <summary>
         /// 获取接入设备的信息
@@ -33,7 +34,24 @@ namespace ScadaWcfLibrary
             return pbuf;
         }
 
+
+        public string PullLog()
+        {
+            if (mylog.Count == 0)
+                return string.Empty;
+            else
+            {
+                return mylog.Dequeue();
+            }           
+        }
+
         #region 宿主程序使用
+
+        public void PushLog(string log)
+        {
+            mylog.Enqueue(log);
+        }
+
 
         public void PushData(byte[] data)
         {
@@ -102,7 +120,7 @@ namespace ScadaWcfLibrary
             {
                 for (int i = 0; i < devList.Count; i++)
                 {
-                    if (devList[i].DevId == dev.DevId)  //设备Id存在，则进行修改
+                    if (devList[i].DevId == dev.DevId)  //设备Id存在，则进行更新
                     {
                         devList[i].ConnId = dev.ConnId;
                         devList[i].IsOnline = true;
@@ -117,7 +135,22 @@ namespace ScadaWcfLibrary
             return false;
         }
 
-
+        /// <summary>
+        /// 更新连接状态
+        /// </summary>
+        /// <param name="_connId">连接ID</param>
+        /// <param name="_isOnline">是否在线</param>
+        public void UpdateConnStatus(uint _connId, bool _isOnline)
+        {
+            for(int i = 0; i < devList.Count; i++)
+            {
+                if( devList[i].ConnId == _connId )
+                {
+                    devList[i].IsOnline = _isOnline;
+                    break;
+                }
+            }
+        }
 
         #endregion
 

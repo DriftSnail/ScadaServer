@@ -1,0 +1,150 @@
+
+ 
+记录时间：2020-03-25 14:52:14,956 
+线程ID:[11] 
+日志级别：ERROR 
+发生类：KtsDBHelper.DBHelper 
+描述：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+CommandText: INSERT INTO `test_db`.`ks95t`
+Params: devId = 1250
+Params: recordTime = 2020/3/25 14:52:14
+
+ 
+
+ 
+记录时间：2020-03-25 15:01:40,512 
+线程ID:[6] 
+日志级别：ERROR 
+发生类：KtsDBHelper.DBHelper 
+描述：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\`test_db\`.\`ks95t\`' at line 1
+CommandText: INSERT INTO \`test_db\`.\`ks95t\`
+Params: devId = 1250
+Params: recordTime = 2020/3/25 15:01:40
+
+ 
+
+ 
+记录时间：2020-03-25 15:03:44,618 
+线程ID:[11] 
+日志级别：ERROR 
+发生类：KtsDBHelper.DBHelper 
+描述：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' ' 'test_db' ' '.' ' 'ks95t' ' '' at line 1
+CommandText: INSERT INTO ' ' 'test_db' ' '.' ' 'ks95t' ' '
+Params: devId = 1250
+Params: recordTime = 2020/3/25 15:03:44
+
+ 
+
+ 
+记录时间：2020-03-25 15:05:56,433 
+线程ID:[11] 
+日志级别：ERROR 
+发生类：KtsDBHelper.DBHelper 
+描述：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''test_db '. ' ks95t '' at line 1
+CommandText: INSERT INTO 'test_db '. ' ks95t ' 
+Params: devId = 1250
+Params: recordTime = 2020/3/25 15:05:55
+
+ 
+
+ 
+记录时间：2020-03-25 15:22:36,295 
+线程ID:[11] 
+日志级别：ERROR 
+发生类：KtsDBHelper.DBHelper 
+描述：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''test_db' . 'ks95t' (`devId`, `recordTime`)' at line 1
+CommandText: INSERT INTO 'test_db' . 'ks95t' (`devId`, `recordTime`)
+Params: devId = 1250
+Params: recordTime = 2020/3/25 15:22:35
+
+ 
+
+ 
+记录时间：2020-03-25 15:32:21,247 
+线程ID:[11] 
+日志级别：ERROR 
+发生类：KtsDBHelper.DBHelper 
+描述：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+CommandText: INSERT INTO `test_db`.`ks95t`
+Params: devId = 1250
+Params: recordTime = 2020/3/25 15:32:20
+
+ 
+
+ 
+记录时间：2020-03-25 15:49:06,428 
+线程ID:[5] 
+日志级别：ERROR 
+发生类：KtsDBHelper.DBHelper 
+描述：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+CommandText: INSERT INTO `test_db`.`ks95t`
+Params: devId = 1250
+Params: recordTime = 2020/3/25 15:49:05
+Params: temp = 12.5
+Params: humi = 52
+
+ 
+
+ 
+记录时间：2020-03-25 15:57:29,593 
+线程ID:[11] 
+日志级别：ERROR 
+发生类：KtsDBHelper.DBHelper 
+描述：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+CommandText: INSERT INTO test_db.ks95t
+Params: devId = 1250
+Params: recordTime = 2020/3/25 15:57:29
+Params: temp = 12.5
+Params: humi = 52
+
+ 
+
+ 
+记录时间：2020-03-25 15:57:44,896 
+线程ID:[11] 
+日志级别：ERROR 
+发生类：KtsDBHelper.DBHelper 
+描述：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+CommandText: INSERT INTO test_db.ks95t
+Params: devId = 1250
+Params: recordTime = 2020/3/25 15:57:44
+Params: temp = 12.5
+Params: humi = 52
+
+ 
+
+ 
+记录时间：2020-03-25 16:03:28,535 
+线程ID:[11] 
+日志级别：ERROR 
+发生类：KtsDBHelper.DBHelper 
+描述：Incorrect integer value: '$devId' for column 'devId' at row 1
+CommandText: INSERT INTO test_db.ks95t(devId, recordTime) VALUES('$devId', '$recordTime')
+Params: devId = 1250
+Params: recordTime = 2020/3/25 16:03:28
+
+ 
+
+ 
+记录时间：2020-03-25 16:06:10,874 
+线程ID:[11] 
+日志级别：ERROR 
+发生类：KtsDBHelper.DBHelper 
+描述：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+CommandText: INSERT INTO test_db.ks95t(devId, recordTime) 
+Params: devId = 1250
+Params: recordTime = 2020/3/25 16:06:10
+
+ 
+
+ 
+记录时间：2020-03-25 16:27:45,046 
+线程ID:[12] 
+日志级别：ERROR 
+发生类：KtsDBHelper.DBHelper 
+描述：Unknown column '@devId' in 'field list'
+CommandText: INSERT INTO `test_db`.`ks95t` (`devId`, `recordTime`) VALUES (`@devId`, `@recordTime`); 
+Params: @devId = 1250
+Params: @recordTime = 2020/3/25 16:27:44
+
+ 

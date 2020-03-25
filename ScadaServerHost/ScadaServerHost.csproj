@@ -120,6 +120,10 @@
     <Content Include="HPSocket\hpsocket_en.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DBHelper\KtsDBHelper.csproj">
+      <Project>{95964c25-bfd6-43b7-807b-c67eb5a4ddb9}</Project>
+      <Name>KtsDBHelper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ScadaWcfLibrary\ScadaWcfLibrary.csproj">
       <Project>{b0e9c327-6708-47ed-8ee0-fd11b5ac6832}</Project>
       <Name>ScadaWcfLibrary</Name>

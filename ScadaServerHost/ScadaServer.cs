@@ -8,6 +8,7 @@ using System.Timers;
 using HPSocket;
 using HPSocket.Tcp;
 using ScadaWcfLibrary;
+using KtsDBHelper;
 
 namespace ScadaServerHost
 {
@@ -68,8 +69,10 @@ namespace ScadaServerHost
 
         #endregion
 
+        public DBHelper dbHelper = new DBHelper("server=localhost;user=root;pwd=431725;database=test_db", DBType.MySQL);
         public TcpPullServer server = new TcpPullServer();
         private HPSocket.Thread.ThreadPool receiveThreadPool = new HPSocket.Thread.ThreadPool();
+
 
         public ScadaServer(string _name, string _ip, ushort _port, SvcManage svc)
         {
@@ -168,20 +171,7 @@ namespace ScadaServerHost
         //通过errorCode参数判断是正常关闭还是异常关闭，0表示正常关闭
         private HandleResult server_OnClose(IServer sender, IntPtr connId, SocketOperation enOperation, int errorCode)
         {
-
-            if (errorCode == 0)
-            {
-#if DEBUG
-                Console.Write(string.Format("连接已断开，连接ID：{0}", connId));
-#endif
-            }
-            else
-            {
-#if DEBUG
-                Console.Write(string.Format("客户端连接发生异常，已经断开连接，连接ID：{0}，错误代码：{1}", connId, errorCode));
-#endif
-            }
-
+            Svc.UpdateConnStatus((uint)connId, false);
             return HandleResult.Ok;
         }
 
@@ -224,6 +214,18 @@ namespace ScadaServerHost
             DevInfo tmp;
             if( Svc.UpdateActiveTime(pkg.connId) ) //查询到连接，更新活跃时间
             {
+                Dictionary<string, object> test = new Dictionary<string, object>();
+                test.Add("@devId", 1250);
+                test.Add("@recordTime", DateTime.Now);
+                try
+                {
+                    //dbHelper.ExecuteNonQuery("INSERT INTO `test_db`.`ks95t` (`devId`, `recordTime`) VALUES ('9', '2020-03-25 15:15:04');");
+                    dbHelper.ExecuteNonQuery("INSERT INTO `test_db`.`ks95t` (`devId`, `recordTime`) VALUES (@devId, @recordTime); ", test);
+                }
+                catch (Exception e)
+                {
+                    Svc.PushLog(e.Message);
+                }
                 
             }
             else if( ParseLoginPkg(pkg, out tmp) )//未查询到该连接，但解析登录包正确，则进行登录操作
@@ -280,7 +282,6 @@ namespace ScadaServerHost
             }
         }
         
-
         #endregion
 
 

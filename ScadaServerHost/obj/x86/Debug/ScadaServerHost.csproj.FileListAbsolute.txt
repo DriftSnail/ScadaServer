@@ -15,3 +15,9 @@ F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaServerHost\
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaServerHost\obj\x86\Debug\ScadaServerHost.csproj.CopyComplete
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaServerHost\obj\x86\Debug\ScadaServerHost.exe
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaServerHost\obj\x86\Debug\ScadaServerHost.pdb
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaServerHost\bin\x86\Debug\KtsDBHelper.dll
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaServerHost\bin\x86\Debug\log4net.dll
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaServerHost\bin\x86\Debug\MySql.Data.dll
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaServerHost\bin\x86\Debug\System.Data.SQLite.dll
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaServerHost\bin\x86\Debug\KtsDBHelper.pdb
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\ScadaServerHost\bin\x86\Debug\KtsDBHelper.dll.config

@@ -17,7 +17,8 @@ namespace ScadaWcfLibrary
         uint GetDeviceCount();
         [OperationContract]
         string PullData();
-
+        [OperationContract]
+        string PullLog();
     }
 
     /// <summary>
