@@ -22,3 +22,4 @@ F:\C#工作区\数据采集服务器系统\DataCollectionServer\DBHelper\obj\Deb
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\DBHelper\obj\Debug\KtsDBHelper.dll
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\DBHelper\obj\Debug\KtsDBHelper.pdb
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\DBHelper\bin\Debug\KtsDBHelper.dll.config
+F:\C#工作区\数据采集服务器系统\DataCollectionServer\DBHelper\obj\Debug\KtsDBHelper.csprojAssemblyReference.cache

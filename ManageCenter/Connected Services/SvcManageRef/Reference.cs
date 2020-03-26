@@ -154,11 +154,17 @@ namespace ManageCenter.SvcManageRef {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISvcManage/GetDeviceCount", ReplyAction="http://tempuri.org/ISvcManage/GetDeviceCountResponse")]
         System.Threading.Tasks.Task<uint> GetDeviceCountAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISvcManage/AddDevice", ReplyAction="http://tempuri.org/ISvcManage/AddDeviceResponse")]
-        void AddDevice(ManageCenter.SvcManageRef.DevInfo dev);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISvcManage/PullData", ReplyAction="http://tempuri.org/ISvcManage/PullDataResponse")]
+        string PullData();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISvcManage/AddDevice", ReplyAction="http://tempuri.org/ISvcManage/AddDeviceResponse")]
-        System.Threading.Tasks.Task AddDeviceAsync(ManageCenter.SvcManageRef.DevInfo dev);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISvcManage/PullData", ReplyAction="http://tempuri.org/ISvcManage/PullDataResponse")]
+        System.Threading.Tasks.Task<string> PullDataAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISvcManage/PullLog", ReplyAction="http://tempuri.org/ISvcManage/PullLogResponse")]
+        string PullLog();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISvcManage/PullLog", ReplyAction="http://tempuri.org/ISvcManage/PullLogResponse")]
+        System.Threading.Tasks.Task<string> PullLogAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -204,12 +210,20 @@ namespace ManageCenter.SvcManageRef {
             return base.Channel.GetDeviceCountAsync();
         }
         
-        public void AddDevice(ManageCenter.SvcManageRef.DevInfo dev) {
-            base.Channel.AddDevice(dev);
+        public string PullData() {
+            return base.Channel.PullData();
         }
         
-        public System.Threading.Tasks.Task AddDeviceAsync(ManageCenter.SvcManageRef.DevInfo dev) {
-            return base.Channel.AddDeviceAsync(dev);
+        public System.Threading.Tasks.Task<string> PullDataAsync() {
+            return base.Channel.PullDataAsync();
+        }
+        
+        public string PullLog() {
+            return base.Channel.PullLog();
+        }
+        
+        public System.Threading.Tasks.Task<string> PullLogAsync() {
+            return base.Channel.PullLogAsync();
         }
     }
 }

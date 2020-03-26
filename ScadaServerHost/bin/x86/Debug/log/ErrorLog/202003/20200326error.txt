@@ -1,0 +1,12 @@
+
+ 
+记录时间：2020-03-26 14:00:02,957 
+线程ID:[11] 
+日志级别：ERROR 
+发生类：KtsDBHelper.DBHelper 
+描述：Fatal error encountered during command execution.
+CommandText: INSERT INTO `test_db`.`ks95t` (`devId`, `recordTime`) VALUES (@devId, @recordTime);
+Params: @temp = 12.5
+Params: @humi = 56.68
+
+ 

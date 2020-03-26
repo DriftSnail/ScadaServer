@@ -52,11 +52,17 @@
   <wsdl:message name="ISvcManage_GetDeviceCount_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDeviceCountResponse" />
   </wsdl:message>
-  <wsdl:message name="ISvcManage_AddDevice_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddDevice" />
+  <wsdl:message name="ISvcManage_PullData_InputMessage">
+    <wsdl:part name="parameters" element="tns:PullData" />
   </wsdl:message>
-  <wsdl:message name="ISvcManage_AddDevice_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddDeviceResponse" />
+  <wsdl:message name="ISvcManage_PullData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PullDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcManage_PullLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:PullLog" />
+  </wsdl:message>
+  <wsdl:message name="ISvcManage_PullLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PullLogResponse" />
   </wsdl:message>
   <wsdl:portType name="ISvcManage">
     <wsdl:operation name="GetDeviceList">
@@ -67,9 +73,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISvcManage/GetDeviceCount" message="tns:ISvcManage_GetDeviceCount_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISvcManage/GetDeviceCountResponse" message="tns:ISvcManage_GetDeviceCount_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddDevice">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISvcManage/AddDevice" message="tns:ISvcManage_AddDevice_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISvcManage/AddDeviceResponse" message="tns:ISvcManage_AddDevice_OutputMessage" />
+    <wsdl:operation name="PullData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcManage/PullData" message="tns:ISvcManage_PullData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcManage/PullDataResponse" message="tns:ISvcManage_PullData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PullLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcManage/PullLog" message="tns:ISvcManage_PullLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcManage/PullLogResponse" message="tns:ISvcManage_PullLog_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_ISvcManage" type="tns:ISvcManage">
@@ -94,8 +104,17 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddDevice">
-      <soap12:operation soapAction="http://tempuri.org/ISvcManage/AddDevice" style="document" />
+    <wsdl:operation name="PullData">
+      <soap12:operation soapAction="http://tempuri.org/ISvcManage/PullData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PullLog">
+      <soap12:operation soapAction="http://tempuri.org/ISvcManage/PullLog" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

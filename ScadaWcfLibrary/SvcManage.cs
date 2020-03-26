@@ -90,6 +90,28 @@ namespace ScadaWcfLibrary
         }
 
         /// <summary>
+        /// 根据连接ID获取产品名称
+        /// </summary>
+        /// <param name="_connId"></param>
+        /// <returns></returns>
+        public string GetProdName(uint _connId)
+        {
+            DevInfo dev = GetDevInfo(_connId);
+            return (dev != null) ? dev.ProdName : string.Empty;
+        }
+
+        /// <summary>
+        /// 根据连接ID获取设备ID
+        /// </summary>
+        /// <param name="_connId"></param>
+        /// <returns></returns>
+        public uint GetDevId(uint _connId)
+        {
+            DevInfo dev = GetDevInfo(_connId);
+            return (dev != null) ? dev.DevId : 0;
+        }
+
+        /// <summary>
         /// 更新设备的最后活跃时间
         /// </summary>
         /// <param name="_connId">连接ID</param>

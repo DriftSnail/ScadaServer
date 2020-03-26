@@ -25,16 +25,28 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddDevice">
+  <xs:element name="PullData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PullDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ScadaWcfLibrary" minOccurs="0" name="dev" nillable="true" type="q2:DevInfo" />
+        <xs:element minOccurs="0" name="PullDataResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddDeviceResponse">
+  <xs:element name="PullLog">
     <xs:complexType>
       <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PullLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PullLogResult" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>

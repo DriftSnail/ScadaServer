@@ -9,6 +9,7 @@ using HPSocket;
 using HPSocket.Tcp;
 using ScadaWcfLibrary;
 using KtsDBHelper;
+using ScadaServerHost.Product;
 
 namespace ScadaServerHost
 {
@@ -25,6 +26,15 @@ namespace ScadaServerHost
         Error
     }
 
+    /// <summary>
+    /// 存储Sql命令和参数相关信息
+    /// </summary>
+    public class SqlInfo
+    {
+        public string Command { get; set; }
+        public Dictionary<string,object> Param { get; set; }
+        public bool IsValid { get; set; }
+    }
 
     class ScadaServer
     {
@@ -203,7 +213,6 @@ namespace ScadaServerHost
 
         }
 
-
         /// <summary>
         /// 用于分析和处理接收的数据
         /// </summary>
@@ -214,19 +223,7 @@ namespace ScadaServerHost
             DevInfo tmp;
             if( Svc.UpdateActiveTime(pkg.connId) ) //查询到连接，更新活跃时间
             {
-                Dictionary<string, object> test = new Dictionary<string, object>();
-                test.Add("@devId", 1250);
-                test.Add("@recordTime", DateTime.Now);
-                try
-                {
-                    //dbHelper.ExecuteNonQuery("INSERT INTO `test_db`.`ks95t` (`devId`, `recordTime`) VALUES ('9', '2020-03-25 15:15:04');");
-                    dbHelper.ExecuteNonQuery("INSERT INTO `test_db`.`ks95t` (`devId`, `recordTime`) VALUES (@devId, @recordTime); ", test);
-                }
-                catch (Exception e)
-                {
-                    Svc.PushLog(e.Message);
-                }
-                
+                ParseRecvData(pkg);
             }
             else if( ParseLoginPkg(pkg, out tmp) )//未查询到该连接，但解析登录包正确，则进行登录操作
             {
@@ -238,6 +235,38 @@ namespace ScadaServerHost
             }
 
         }
+
+        /// <summary>
+        /// 根据相应产品协议解析接收的数据
+        /// </summary>
+        /// <param name="pkg"></param>
+        private void ParseRecvData(RecvPkg pkg)
+        {
+            SqlInfo sqltext;
+            switch( Svc.GetProdName(pkg.connId) )
+            {
+                case "KS95T":
+                    {
+                        sqltext =  ks95t.GetSqlText(Svc.GetDevId(pkg.connId), pkg.data);                        
+                    }
+                    break;
+
+                default:
+                    return;
+            }
+            if (sqltext.IsValid)
+            {
+                try
+                {
+                    dbHelper.ExecuteNonQuery(sqltext.Command, sqltext.Param);
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+        }
+
 
         /// <summary>
         /// 解析登录包

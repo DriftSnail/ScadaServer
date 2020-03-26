@@ -7,4 +7,3 @@ F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\obj
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\obj\Debug\ManageCenter.csproj.CoreCompileInputs.cache
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\obj\Debug\ManageCenter.exe
 F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\obj\Debug\ManageCenter.pdb
-F:\C#工作区\数据采集服务器系统\DataCollectionServer\ManageCenter\obj\Debug\ManageCenter.csprojAssemblyReference.cache

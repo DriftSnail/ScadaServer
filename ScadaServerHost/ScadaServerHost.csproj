@@ -94,7 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientsManage.cs" />
+    <Compile Include="CommonLib.cs" />
     <Compile Include="MainEntry.cs" />
+    <Compile Include="Product\ks95t.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScadaServer.cs" />
