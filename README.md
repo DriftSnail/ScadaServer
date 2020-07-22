@@ -28,8 +28,8 @@
 
 以下是给Scada Server后台服务写的一个管控界面程序（基于WCF框架）：
 
-![](./Image/scada HMI .png)
+![](./Image/scada_hmi.png)
 
 以下是数据库更新的内容：
 
-![](.\Image\database.png)
+![](./Image/database.png)
