@@ -20,7 +20,7 @@
 
 ### 三，架构设计
 
-![](.\Image\scada.png)
+![](./Image/scada.png)
 
 注：消息队列，暂未采用ZeroMQ框架。
 
@@ -28,7 +28,7 @@
 
 以下是给Scada Server后台服务写的一个管控界面程序（基于WCF框架）：
 
-![](.\Image\scada HMI .png)
+![](./Image/scada HMI .png)
 
 以下是数据库更新的内容：
 
